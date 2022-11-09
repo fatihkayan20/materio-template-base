@@ -1,0 +1,38 @@
+{
+  "extends": ["next", "@codana/eslint-config"],
+  "settings": {
+    "react": {
+      "createClass": "createReactClass",
+      "pragma": "React",
+      "version": "detect"
+    },
+    "import/ignore": ["node_modules"]
+  },
+  "plugins": ["react"],
+  "rules": {
+    "import/no-unused-modules": [
+      2,
+      {
+        "unusedExports": true,
+        "missingExports": true,
+        "ignoreExports": ["./src/pages/**"]
+      }
+    ]
+  },
+  "ignorePatterns": [
+    "*.js",
+    "*.json",
+    "*.md",
+    ".auditmerc",
+    ".husky",
+    ".next",
+    ".nvmrc",
+    ".yarn",
+    ".yarnrc.yml",
+    "azure",
+    "lib",
+    "next-env.d.ts",
+    "node_modules",
+    "yarn.lock"
+  ]
+}
