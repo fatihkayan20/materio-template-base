@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "audit": "yarn npm audit --all --recursive --severity $(< .auditmerc)",
     "build": "next build",
     "clean": "rimraf .next node_modules",
     "dev": "next dev",
