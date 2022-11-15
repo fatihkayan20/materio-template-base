@@ -83,9 +83,6 @@ export type LayoutProps = {
   afterVerticalNavMenuContent?: (props?: any) => ReactNode;
   beforeVerticalNavMenuContent?: (props?: any) => ReactNode;
 };
-export type BlankLayoutProps = {
-  children: ReactNode;
-};
 
 export enum LoginType {
   NotLoggedIn = 0,
