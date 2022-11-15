@@ -1,0 +1,93 @@
+import { Theme } from "@mui/material";
+import themeConfig from "../../configs/themeConfig";
+
+type ReturnType = {
+  MuiButton: {
+    styleOverrides: {
+      root: {
+        fontWeight: number;
+        borderRadius: number;
+        lineHeight: number;
+        letterSpacing: string;
+        padding: string;
+      };
+      contained: {
+        boxShadow: string;
+        padding: string;
+      };
+      outlined: {
+        padding: string;
+      };
+      sizeSmall: {
+        padding: string;
+        "&.MuiButton-contained": {
+          padding: string;
+        };
+        "&.MuiButton-outlined": {
+          padding: string;
+        };
+      };
+      sizeLarge: {
+        padding: string;
+        "&.MuiButton-contained": {
+          padding: string;
+        };
+        "&.MuiButton-outlined": {
+          padding: string;
+        };
+      };
+    };
+  };
+  MuiButtonBase: {
+    defaultProps: {
+      disableRipple: boolean;
+    };
+  };
+};
+
+const Button = (theme: Theme): ReturnType => {
+  return {
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          fontWeight: 500,
+          borderRadius: 5,
+          lineHeight: 1.71,
+          letterSpacing: "0.3px",
+          padding: `${theme.spacing(1.875, 3)}`,
+        },
+        contained: {
+          boxShadow: theme.shadows[3],
+          padding: `${theme.spacing(1.875, 5.5)}`,
+        },
+        outlined: {
+          padding: `${theme.spacing(1.625, 5.25)}`,
+        },
+        sizeSmall: {
+          padding: `${theme.spacing(1, 2.25)}`,
+          "&.MuiButton-contained": {
+            padding: `${theme.spacing(1, 3.5)}`,
+          },
+          "&.MuiButton-outlined": {
+            padding: `${theme.spacing(0.75, 3.25)}`,
+          },
+        },
+        sizeLarge: {
+          padding: `${theme.spacing(2.125, 5.5)}`,
+          "&.MuiButton-contained": {
+            padding: `${theme.spacing(2.125, 6.5)}`,
+          },
+          "&.MuiButton-outlined": {
+            padding: `${theme.spacing(1.875, 6.25)}`,
+          },
+        },
+      },
+    },
+    MuiButtonBase: {
+      defaultProps: {
+        disableRipple: themeConfig.disableRipple,
+      },
+    },
+  };
+};
+export default Button;
