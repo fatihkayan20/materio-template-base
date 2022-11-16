@@ -134,9 +134,10 @@ export const SettingsProvider = ({
       setSettings({ ...restoredSettings });
     }
     if (pageSettings) {
-      setSettings({ ...settings, ...pageSettings });
+      setSettings((prev) => ({ ...prev, ...pageSettings }));
     }
-  }, [pageSettings, settings]);
+  }, [pageSettings]);
+
   useEffect(() => {
     if (settings.layout === "horizontal" && settings.skin === "semi-dark") {
       saveSettings({ ...settings, skin: "default" });
@@ -144,7 +145,8 @@ export const SettingsProvider = ({
     if (settings.layout === "horizontal" && settings.appBar === "hidden") {
       saveSettings({ ...settings, appBar: "fixed" });
     }
-  }, [settings, settings.layout]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [settings.layout]);
   const saveSettings = (updatedSettings: Settings): void => {
     storeSettings(updatedSettings);
     setSettings(updatedSettings);

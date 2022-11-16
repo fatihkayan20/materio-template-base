@@ -91,7 +91,8 @@ const VerticalNavHeader = (props: Props): React.ReactNode => {
 
   React.useEffect(() => {
     saveSettings({ ...settings, navCollapsed: isCollapseNeeded });
-  }, [isCollapseNeeded, saveSettings, settings]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isCollapseNeeded]);
 
   return (
     <MenuHeaderWrapper

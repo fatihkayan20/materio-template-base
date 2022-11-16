@@ -29,7 +29,7 @@ const UserLayout = ({ children }: Props): React.ReactElement => {
       }
     };
     func();
-  }, [settings.lastLayout, settings.layout]);
+  }, [settings.layout]);
   return (
     <Layout
       hidden={hidden}

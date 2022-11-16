@@ -113,16 +113,8 @@ const VerticalNavGroup = (props: Props): React.ReactNode => {
     if (navCollapsed && !navHover) {
       setGroupActive([]);
     }
-  }, [
-    currentURL,
-    groupActive,
-    item,
-    navCollapsed,
-    navHover,
-    router.asPath,
-    setCurrentActiveGroup,
-    setGroupActive,
-  ]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [currentURL, item, navCollapsed, navHover]);
   useEffect(() => {
     if (navCollapsed && !navHover) {
       setGroupActive([]);
@@ -133,18 +125,14 @@ const VerticalNavGroup = (props: Props): React.ReactNode => {
     ) {
       setGroupActive([...currentActiveGroup]);
     }
-  }, [
-    currentActiveGroup,
-    groupActive.length,
-    navCollapsed,
-    navHover,
-    setGroupActive,
-  ]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [navCollapsed, navHover]);
   useEffect(() => {
     if (groupActive.length === 0 && !navCollapsed) {
       setGroupActive([]);
     }
-  }, [groupActive.length, navCollapsed, navHover, setGroupActive]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [navCollapsed, navHover]);
   const IconTag = parent && !item.icon ? themeConfig.navSubItemIcon : item.icon;
   const menuGroupCollapsedStyles =
     navCollapsed && !navHover ? { opacity: 0 } : { opacity: 1 };

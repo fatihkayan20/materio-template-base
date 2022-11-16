@@ -27,7 +27,8 @@ const Layout = (props: LayoutProps): React.ReactElement => {
         saveSettings({ ...settings, layout: settings.lastLayout });
       }
     }
-  }, [hidden, saveSettings, settings, settings.navCollapsed]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [hidden, settings.navCollapsed]);
   if (hidden) {
     return <BottomBarLayout {...props}>{children}</BottomBarLayout>;
   }
