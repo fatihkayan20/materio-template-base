@@ -1,5 +1,5 @@
 {
-  "extends": ["next", "@codana/eslint-config"],
+  "extends": ["next"],
   "settings": {
     "react": {
       "createClass": "createReactClass",

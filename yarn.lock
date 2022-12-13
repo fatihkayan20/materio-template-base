@@ -427,13 +427,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@codana/eslint-config@npm:^2.0.1":
-  version: 2.0.2
-  resolution: "@codana/eslint-config@npm:2.0.2"
-  checksum: e970a5ad758cf771137fcc498f5f6514513b98ef7cf3e13fcfb8e62f466508299338409640370564cc87975e35af41d5a93dffee5e7f1a666d9dcd856f2808df
-  languageName: node
-  linkType: hard
-
 "@commitlint/cli@npm:^17.1.2":
   version: 17.2.0
   resolution: "@commitlint/cli@npm:17.2.0"
@@ -7136,7 +7129,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "web-ui@workspace:."
   dependencies:
-    "@codana/eslint-config": ^2.0.1
     "@commitlint/cli": ^17.1.2
     "@commitlint/config-conventional": ^17.1.0
     "@emotion/cache": ^11.10.5

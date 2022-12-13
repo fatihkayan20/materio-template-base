@@ -3,7 +3,7 @@ module.exports = {
   parserPreset: {
     parserOpts: {
       headerCorrespondence: ["type", "subject", "ticket"],
-      headerPattern: /^(\w+): (.*) (PC-[1-9]\d*)$/,
+      headerPattern: /^(\w+): (.*) (CSB-[1-9]\d*)$/,
     },
   },
   rules: {
